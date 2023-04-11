@@ -29,6 +29,6 @@ public class CoordinateLabeler : MonoBehaviour
     coordinates.x = Mathf.RoundToInt(transform.parent.position.x);
     coordinates.y = Mathf.RoundToInt(transform.parent.position.y);
 
-    label.text = "..,..";
+    label.text = coordinates.x + "," + coordinates.y;
   }
 }
