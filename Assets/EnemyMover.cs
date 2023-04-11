@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] List<WayPoint> path = new List<WayPoint>();
+
     void Start()
     {
-        
+        PrintWayPointName();
     }
 
-    // Update is called once per frame
-    void Update()
+   void PrintWayPointName()
+   {
+    foreach(WayPoint waypoint in path)
     {
-        
+      Debug.Log(waypoint.name);
     }
+   }
 }
