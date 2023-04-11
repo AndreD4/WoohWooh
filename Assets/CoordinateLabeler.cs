@@ -1,18 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
+[ExecuteAlways]
 public class CoordinateLabeler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+  TextMeshPro label;
+  Vector2Int coordinates = new Vector2Int();
+
+  void Awake()
+  {
+    label = GetComponent<TextMeshPro>();
+  }
+  void Update()
+  {
+
+    if (!Application.isPlaying)
     {
-        
+      DisplayCoordinates();
     }
+  }
+
+  void DisplayCoordinates()
+  {
+    coordinates.x = Mathf.RoundToInt(transform.parent.position.x);
+    coordinates.y = Mathf.RoundToInt(transform.parent.position.y);
+
+    label.text = "..,..";
+  }
 }
