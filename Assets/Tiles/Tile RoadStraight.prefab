@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3944478850441754110, guid: 75e420ea1a2857a45a2038fe98107f0d, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8368013360051443712, guid: 75e420ea1a2857a45a2038fe98107f0d, type: 3}
       propertyPath: m_Name
       value: Tile RoadStraight
